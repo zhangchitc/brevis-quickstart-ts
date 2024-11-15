@@ -11,7 +11,7 @@ contract TokenTransferZkOnly is BrevisAppZkOnly, Ownable {
 
     bytes32 public vkHash;
 
-    constructor(address _brevisRequest) BrevisAppZkOnly(_brevisRequest) Ownable(msg.sender) {}
+    constructor(address _brevisRequest, address _owner) BrevisAppZkOnly(_brevisRequest) Ownable(_owner) {}
 
     // BrevisQuery contract will call our callback once Brevis backend submits the proof.
     // This method is called with once the proof is verified.
